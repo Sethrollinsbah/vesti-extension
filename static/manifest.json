@@ -1,0 +1,20 @@
+{
+	"manifest_version": 3,
+	"name": "Vesti Extension",
+	"version": "0.1.1127",
+	"description": "Personal Virtual Tryon Extension",
+	"action": {
+		"default_title": "VESTI",
+		"default_popup": "index.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"]
+		}
+	],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"permissions": ["activeTab", "storage", "scripting"]
+}
